@@ -1,0 +1,10 @@
+Analysis:
+
+The bookstore system follows the Interface Segregation Principle (ISP) because all interfaces are small, focused, and specific. No class is forced to implement methods it does not use. For example:
+PaymentProcessor only contains process(), so payment classes like PayPal or Credit Card implement only relevant behavior.
+
+Refactoring Approach:
+No major refactoring is required because the system already follows ISP properly.
+
+Justification:
+The system uses small and focused interfaces that are easy to understand and manage. Each class only implements the methods it requires for its specific functionality. This avoids unnecessary dependencies and follows good design principles like ISP.
