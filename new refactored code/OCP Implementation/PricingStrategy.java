@@ -1,6 +1,5 @@
 import java.util.List;
 
-// OCP: New pricing rules (like discounts) can be added without changing Order class
     interface PricingStrategy {
     double calculate(List<Book> books);
     }
