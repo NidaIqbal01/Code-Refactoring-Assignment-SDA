@@ -1,3 +1,5 @@
+package com.mycompany.bookstore;
+
 public class OrderPrinter {
 
     public void printOrder(Order order) {
