@@ -18,7 +18,7 @@ public class ReviewService {
         for (Customer customer : customers) {
             for (Book book : books) {
                 int rating = random.nextInt(5) + 1;
-                // Logic is now independent of the specific text
+               
                 String comment = commentBank.get(random.nextInt(commentBank.size()));
                 reviews.add(new Review(customer, book, comment, rating));
             }
