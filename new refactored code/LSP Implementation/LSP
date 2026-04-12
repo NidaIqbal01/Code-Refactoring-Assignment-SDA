@@ -1,0 +1,8 @@
+The code does not violate LSP, and I have provided reasoning to support this.
+Analysis
+Book store management system is not violating the liskov substitution principle because subclasses admin and customer can be used anywhere their parent class User is expected without breaking the behavior.
+LSP requires that a child class should work anywhere its parent class is expected. In this code, both customer and admin extends the user class and do not override or weaken any behavior. For instance, they inherit authenticate () and get username () exactly as defined in user.
+Refactoring Approach
+No refactoring is strictly needed because the code already respects LSP.
+Justification
+Since customer and admin can be substituted wherever the user is expected without breaking the functionality or behavior. The subclasses extend functionality safely without violating the guarantees of the base class.
