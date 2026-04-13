@@ -3,7 +3,7 @@ package com.mycompany.bookstore;
 import java.util.List;
 import java.text.DecimalFormat;
 
-public class ReviewPrinter {
+public class ReviewPrinter extends ReviewManager{
 
     public void printReviews(Book[] books, ReviewManager reviewManager) {
         DecimalFormat df = new DecimalFormat("#.00");
