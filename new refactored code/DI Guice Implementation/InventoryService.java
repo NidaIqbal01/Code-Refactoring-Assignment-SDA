@@ -8,7 +8,7 @@ import com.google.inject.Inject;
 class InventoryService {
     private final InventoryRepository inventory;
 
-    @Inject // <--- This is the magic flag!
+    @Inject // 
     public InventoryService(InventoryRepository inventory) {
         this.inventory = inventory;
     }
