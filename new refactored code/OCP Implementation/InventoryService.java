@@ -1,6 +1,6 @@
 package com.mycompany.bookstore;
 
-public class InventoryService {
+public class InventoryService extends Inventory{
     private final Inventory inventory;
 
     public InventoryService(Inventory inventory) {
