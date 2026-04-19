@@ -1,0 +1,62 @@
+package reportdemo;
+
+// separate interfaces 
+    interface SalesReportGenerator {
+    void generateSalesReport();
+}
+
+interface InventoryReportGenerator {
+    void generateInventoryReport();
+}
+
+interface EmailSender {
+    void sendEmailReport();
+}
+
+interface PDFExporter {
+    void exportToPDF();
+}
+
+// SimpleSalesReport class
+class SimpleSalesReport implements SalesReportGenerator {
+
+    @Override
+    public void generateSalesReport() {
+        System.out.println("Generating sales report...");
+    }
+}
+
+// InventoryReport class
+class InventoryReport implements InventoryReportGenerator, EmailSender, PDFExporter {
+
+    @Override
+    public void generateInventoryReport() {
+        System.out.println("Generating inventory report...");
+    }
+
+    @Override
+    public void sendEmailReport() {
+        System.out.println("Sending inventory report via email...");
+    }
+
+    @Override
+    public void exportToPDF() {
+        System.out.println("Exporting inventory report to PDF...");
+    }
+}
+
+// MAIN CLASS
+public class ReportDemo {
+    public static void main(String[] args) {
+
+        SalesReportGenerator salesReport = new SimpleSalesReport();
+        salesReport.generateSalesReport();
+
+        System.out.println();
+
+        InventoryReport inventoryReport = new InventoryReport();
+        inventoryReport.generateInventoryReport();
+        inventoryReport.sendEmailReport();
+        inventoryReport.exportToPDF();
+    }
+}   
