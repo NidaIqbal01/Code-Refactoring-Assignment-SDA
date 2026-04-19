@@ -1,0 +1,9 @@
+public class CheckoutService {
+    public void checkout(payable user, Order order) {
+        if (user.pay(order.getTotalPrice())) {
+            order.completeOrder();
+        } else {
+            System.out.println("Payment failed.");
+        }
+    }
+}
