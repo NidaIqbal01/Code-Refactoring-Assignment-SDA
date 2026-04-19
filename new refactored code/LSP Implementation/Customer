@@ -1,0 +1,23 @@
+public class Customer extends User implements payable {
+    private String email;
+
+    public Customer(String username, String password, String email) {
+        super(username, password);
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void purchaseBook(Book book) {
+        // Logic for purchasing a book
+        System.out.println(getUsername() + " purchased " + book.getTitle());}
+ @Override
+    public boolean pay(double amount) {
+        System.out.println(getUsername() + " paid $" + amount);
+        return true;
+
+    }
+
+}
