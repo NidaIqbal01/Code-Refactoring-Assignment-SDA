@@ -1,10 +1,7 @@
 Analysis:
 
-The bookstore system follows the Interface Segregation Principle (ISP) because all interfaces are small, focused, and specific. No class is forced to implement methods it does not use. For example:
-PaymentProcessor only contains process(), so payment classes like PayPal or Credit Card implement only relevant behavior.
-
+The initial code violates the Interface Segregation Principle (ISP) because it uses a large interface BookReportService that forces classes to implement methods they do not need. This causes low cohesion, high coupling and poor maintainability due to irrelevant functionalities like email, and PDF export.
 Refactoring Approach:
-No major refactoring is required because the system already follows ISP properly.
-
+To fix this issue, the large interface was split into smaller more specific interfaces SalesReportGenerator, InventoryReportGenerator, EmailSender, and PDFExporter. Each interface handles a single responsibility and each class implements only the interface relevant to its functionality and avoids unnecessary implementations.
 Justification:
-The system uses small and focused interfaces that are easy to understand and manage. Each class only implements the methods it requires for its specific functionality. This avoids unnecessary dependencies and follows good design principles like ISP.
+After refactoring, each interface has a single responsibility and classes are no longer forced to implement unused methods. This improves cohesion, reduces coupling, and enhances maintainability and scalability of the system.
