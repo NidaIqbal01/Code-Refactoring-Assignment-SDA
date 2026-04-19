@@ -8,7 +8,12 @@ public class Admin extends User {
     public Admin(String username, String password) {
         super(username, password);
     }
-
+@Override
+public boolean pay(double amount) {
+    // Admins don't pay, they manage system
+    System.out.println("Admin cannot make payments.");
+    return false;
+}
     public void addBookToInventory(Book book) {
         // Logic for adding a book to the inventory
         System.out.println("Added " + book.getTitle() + " to inventory.");
