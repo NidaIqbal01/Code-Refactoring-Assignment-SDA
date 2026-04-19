@@ -15,7 +15,10 @@ public class User {
     public boolean authenticate(String password) {
         return this.password.equals(password);
     }
-
+public boolean pay(double amount) {
+        System.out.println(username + " paid $" + amount);
+        return true;
+    }
     public String getUsername() {
         return username;
     }
