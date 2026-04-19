@@ -15,7 +15,12 @@ public class Customer extends User {
     public String getEmail() {
         return email;
     }
+@Override
+    public boolean pay(double amount) {
+        System.out.println(getUsername() + " paid $" + amount);
+        return true;
 
+    }
     public void purchaseBook(Book book) {
         // Logic for purchasing a book
         System.out.println(getUsername() + " purchased " + book.getTitle());
