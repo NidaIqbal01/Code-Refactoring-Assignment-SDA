@@ -1,9 +1,9 @@
 package com.mycompany.bookstore;
 
 public class InventoryService {
-    private final IInventory inventory;
+    private final InventoryInterface inventory;
 
-    public InventoryService(IInventory inventory) {
+    public InventoryService(InventoryInterface inventory) {
         this.inventory = inventory;
     }
 
