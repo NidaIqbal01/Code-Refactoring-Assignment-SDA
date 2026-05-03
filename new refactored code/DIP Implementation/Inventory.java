@@ -3,7 +3,7 @@ package com.mycompany.bookstore;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Inventory implements IInventory {
+public class Inventory implements InventoryInterface {
     private List<Book> books;
 
     public Inventory() {
