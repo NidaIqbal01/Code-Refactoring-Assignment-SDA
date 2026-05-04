@@ -1,10 +1,6 @@
 import java.util.List;
 
-    interface PricingStrategy {
-    double calculate(List<Book> books);
-    }
-
-    class StandardPricing implements PricingStrategy 
+    class StandardPricing 
     {
         public double calculate(List<Book> books) {
         return books.stream().mapToDouble(Book::getPrice).sum();
