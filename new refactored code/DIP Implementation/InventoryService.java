@@ -1,6 +1,6 @@
 package com.mycompany.bookstore;
 
-public class InventoryService {
+public class InventoryService implements InventoryInterface{
     private final InventoryInterface inventory;
 
     public InventoryService(InventoryInterface inventory) {
